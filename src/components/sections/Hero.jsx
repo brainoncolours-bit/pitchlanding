@@ -49,8 +49,8 @@ export default function UltimateHero() {
               animate={{ opacity: 1, x: 0 }}
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 mb-8"
             >
-              <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-[10px] font-bold text-blue-400 uppercase tracking-[0.4em]">The Next Evolution</span>
+              {/* <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" /> */}
+              {/* <span className="text-[10px] font-bold text-blue-400 uppercase tracking-[0.4em]">The Next Evolution</span> */}
             </motion.div>
 
             <h1 className="text-7xl md:text-9xl font-black text-white leading-[0.85] tracking-tighter uppercase italic mb-10">

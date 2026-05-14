@@ -63,11 +63,26 @@ export default function Footer() {
           <div>
             <h4 className="text-blue-500 font-black uppercase tracking-[0.3em] text-[10px] mb-8 font-mono">// CONNECT</h4>
             <div className="flex flex-col gap-4">
-              {['Twitter', 'LinkedIn', 'Instagram'].map((social) => (
-                <a key={social} href="#" className="text-white font-black uppercase italic tracking-tighter text-lg hover:text-blue-500 transition-colors">
-                  {social}
-                </a>
-              ))}
+             {[ 'LinkedIn', 'Instagram'].map((social) => {
+  const links = {
+    // Twitter: "https://twitter.com/delvindanny",
+    LinkedIn: "https://in.linkedin.com/in/delvindanny",
+    Instagram: "https://www.instagram.com/pitchstudio_byique?igsh=bDl1Mm1rZmVrNWhz"
+    
+  };
+
+  return (
+    <a 
+      key={social} 
+      href={links[social]} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-white font-black uppercase italic tracking-tighter text-lg hover:text-blue-500 transition-colors"
+    >
+      {social}
+    </a>
+  );
+})}
             </div>
           </div>
         </div>

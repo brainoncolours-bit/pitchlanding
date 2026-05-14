@@ -7,9 +7,9 @@ import './App.css'
 function App() {
   return (
     <Router>
-      <div className="bg-slate-900 min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1 pt-16">
+        <main className="flex-1 ">
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>

@@ -8,6 +8,7 @@ import Testimonials from '../components/sections/Testimonials'
 import FAQ from '../components/sections/FAQ'
 import FinalCTA from '../components/sections/FinalCTA'
 import Contact from '../components/common/Contact'
+import Gallery from '../components/sections/Gallery'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Contact />
+      <Gallery />
     </div>
   )
 }

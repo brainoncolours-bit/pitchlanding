@@ -72,45 +72,60 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* RIGHT: FOUNDER "TACTICAL" CARD */}
+     {/* RIGHT: FOUNDER "TACTICAL" CARD */}
+      {/* RIGHT: FOUNDER "TACTICAL" CARD */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative group"
           >
             {/* Outer Glow */}
-            <div className="absolute inset-0 bg-blue-600/10 blur-[80px] rounded-full" />
+            <div className="absolute inset-0 bg-blue-600/10 blur-[80px] rounded-full group-hover:bg-blue-600/20 transition-colors duration-700" />
 
             <div className="relative z-10 bg-white/[0.02] backdrop-blur-3xl border border-white/10 p-1 rounded-[2.5rem] overflow-hidden">
                {/* Inner Card Frame */}
                <div className="bg-[#080808] rounded-[2.3rem] p-10 border border-white/5">
                   
-                  {/* Profile Header */}
+                  {/* Profile Header with Larger Image */}
                   <div className="relative mb-10 inline-block">
-                    <div className="w-32 h-32 rounded-2xl bg-gradient-to-tr from-blue-600 to-blue-400 flex items-center justify-center shadow-[0_0_30px_rgba(37,99,235,0.4)]">
-                       <span className="text-5xl font-black text-white italic">DD</span>
+                    <div className="relative w-48 h-56 rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(37,99,235,0.25)]">
+                       {/* The Founder Image */}
+                       <img 
+                        src="src/assets/founder.jpeg" 
+                        alt="Delvin Danny"
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                       />
+                       {/* Tactical Overlay Gradient */}
+                       <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-50" />
                     </div>
+
                     {/* Floating Status Tag */}
-                    <div className="absolute -bottom-3 -right-6 bg-blue-600 text-white text-[10px] font-black px-3 py-1 uppercase tracking-tighter skew-x-12">
+                    <div className="absolute -bottom-3 -right-10 bg-blue-600 text-white text-[10px] font-black px-5 py-2 uppercase tracking-tighter skew-x-12 shadow-xl">
                        Founder / Visionary
                     </div>
                   </div>
 
-                  <h3 className="text-4xl font-black text-white uppercase italic tracking-tighter mb-2">
-                    Delvin Danny
-                  </h3>
-                  <div className="w-12 h-1 bg-blue-500 mb-8" />
+                  <div className="relative">
+                    <h3 className="text-4xl font-black text-white uppercase italic tracking-tighter mb-2">
+                      Delvin Danny
+                    </h3>
+                    <div className="flex items-center gap-2 mb-8">
+                      <div className="w-12 h-1 bg-blue-500" />
+                      <div className="w-2 h-1 bg-blue-500/30" />
+                      <div className="w-1 h-1 bg-blue-500/10" />
+                    </div>
+                  </div>
 
-                  <p className="text-white/60 text-lg font-medium leading-snug mb-10">
+                  <p className="text-white/60 text-lg font-medium leading-snug mb-10 italic">
                     "Pitch Studio is my life's work. Every founder who finds their investor, every mentor who discovers a unicorn – that's the movement we're building together."
                   </p>
 
                   <div className="grid grid-cols-2 gap-4">
-                     <button className="py-4 bg-white/5 border border-white/10 text-white text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+                     <button className="py-4 bg-white/5 border border-white/10 text-white text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
                         LinkedIn
                      </button>
-                     <button className="py-4 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest hover:bg-blue-500 transition-all">
+                     <button className="py-4 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest hover:bg-blue-500 transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
                         Twitter
                      </button>
                   </div>
@@ -118,8 +133,13 @@ export default function About() {
             </div>
 
             {/* Corner Decorative Brackets */}
-            <div className="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-blue-500/50" />
-            <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-blue-500/50" />
+            <div className="absolute -top-4 -left-4 w-16 h-16 border-t-2 border-l-2 border-blue-500/50" />
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-2 border-r-2 border-blue-500/50" />
+            
+            {/* "Data" decorative text */}
+            <div className="absolute top-1/2 -right-12 origin-left rotate-90 text-[8px] font-mono uppercase tracking-[0.5em] text-white/20 whitespace-nowrap">
+              System Entry: Founder_D.Danny // 2024
+            </div>
           </motion.div>
 
         </div>

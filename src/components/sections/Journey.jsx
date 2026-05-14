@@ -108,12 +108,16 @@ export default function Journey() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="px-12 py-5 bg-white text-black font-black uppercase tracking-widest text-sm hover:bg-blue-500 hover:text-white transition-all">
-                Express Interest
-              </button>
-              <button className="px-12 py-5 border-2 border-white/30 text-white font-black uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all">
-                Become an Ambassador
-              </button>
+              <a href="https://forms.gle/ZHmQLbU9zpAiWVmS6" target="_blank" rel="noopener noreferrer">
+                <button className="px-12 py-5 bg-white text-black font-black uppercase tracking-widest text-sm hover:bg-blue-500 hover:text-white transition-all">
+                  Express Interest
+                </button>
+              </a>
+               <a href="https://forms.gle/ZHmQLbU9zpAiWVmS6" target="_blank" rel="noopener noreferrer">
+                <button className="px-12 py-5 border-2 border-white/30 text-white font-black uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all">
+                  Become an Ambassador
+                </button>
+              </a>
             </div>
           </div>
         </motion.div>

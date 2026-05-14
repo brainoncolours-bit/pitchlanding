@@ -129,9 +129,11 @@ export default function FAQ() {
                 Our operations team is standing by to assist you.
               </p>
             </div>
-            <button className="px-10 py-5 bg-white text-black font-black uppercase tracking-widest text-sm hover:bg-black hover:text-white transition-all shadow-xl">
-              Get in Touch
-            </button>
+            <a href="#contact" rel="noopener noreferrer">
+              <button className="px-10 py-5 bg-white text-black font-black uppercase tracking-widest text-sm hover:bg-black hover:text-white transition-all shadow-xl">
+                Get in Touch
+              </button>
+            </a>
           </div>
         </motion.div>
       </div>
