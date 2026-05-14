@@ -71,6 +71,7 @@ export default function Navbar() {
 
         {/* Action Button */}
         <div className="hidden md:block">
+          <a href="https://forms.gle/ZHmQLbU9zpAiWVmS6" target="_blank" rel="noopener noreferrer">
           <motion.button 
             whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(37, 99, 235, 0.5)" }}
             whileTap={{ scale: 0.95 }}
@@ -78,6 +79,7 @@ export default function Navbar() {
           >
             Get Started
           </motion.button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
