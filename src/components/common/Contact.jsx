@@ -1,24 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, MapPin, Mail, Terminal, Fingerprint, Activity, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Send, MapPin, Fingerprint, Activity, ShieldCheck } from 'lucide-react';
 
 export default function TacticalContact() {
+  // 1. Setup Form State
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  // 2. Handle Gmail Redirection
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const recipient = "support@thepitchstudio.co";
+    const subject = encodeURIComponent(`MISSION DIRECTIVE: ${formData.name}`);
+    const body = encodeURIComponent(
+      `------------------------------------------\n` +
+      `MISSION ORIGIN DETAILS\n` +
+      `------------------------------------------\n` +
+      `Label: ${formData.name}\n` +
+      `Node: ${formData.email}\n\n` +
+      `DIRECTIVE:\n${formData.message}\n` +
+      `------------------------------------------`
+    );
+    
+    // Gmail-specific compose URL for a new tab
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+    
+    window.open(gmailUrl, '_blank');
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   return (
     <section id="contact" className="relative py-32 bg-[#010204] overflow-hidden selection:bg-blue-600">
       
       {/* --- KINETIC MESH BACKGROUND --- */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] bg-[size:40px_40px] opacity-20" />
-        {/* Blue scale palette referencing your profile preferences */}
         <div className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-blue-600/10 blur-[120px] rounded-full mix-blend-screen" />
         <div className="absolute -bottom-24 -left-24 w-[600px] h-[600px] bg-blue-900/10 blur-[120px] rounded-full" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        
         <div className="flex flex-col lg:flex-row gap-6 items-stretch">
           
-          {/* 1. THE STATUS SIDEBAR (Minimal Tactical Readout) */}
+          {/* 1. THE STATUS SIDEBAR */}
           <div className="hidden lg:flex w-16 flex-col justify-between border-l border-white/5 py-4 pl-4">
             <span className="text-[10px] font-black text-white/20 uppercase [writing-mode:vertical-lr] tracking-[1em] whitespace-nowrap">
               ST_CRYPTO_LINK // ESTABLISHED
@@ -33,7 +64,7 @@ export default function TacticalContact() {
           {/* 2. THE MAIN COMMAND MODULE */}
           <div className="flex-1 grid lg:grid-cols-12 gap-6">
             
-            {/* LEFT: FORM INTERFACE (7 Cols) */}
+            {/* LEFT: FORM INTERFACE */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -55,24 +86,51 @@ export default function TacticalContact() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-300 via-blue-500 to-blue-900">Uplink.</span>
               </h2>
 
-              <form className="space-y-12">
+              <form onSubmit={handleSubmit} className="space-y-12">
                 <div className="grid md:grid-cols-2 gap-12">
                   <div className="relative group/field">
                     <label className="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-4 block italic">Origin Label</label>
-                    <input type="text" placeholder="NAME_REQUIRED" className="w-full bg-transparent border-b border-white/10 py-4 text-white font-bold tracking-[0.2em] focus:outline-none focus:border-blue-500 transition-all placeholder:text-white/5 uppercase text-xs" />
+                    <input 
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      type="text" 
+                      placeholder="NAME_REQUIRED" 
+                      className="w-full bg-transparent border-b border-white/10 py-4 text-white font-bold tracking-[0.2em] focus:outline-none focus:border-blue-500 transition-all placeholder:text-white/5 uppercase text-xs" 
+                    />
                   </div>
                   <div className="relative group/field">
                     <label className="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-4 block italic">Digital Node</label>
-                    <input type="email" placeholder="EMAIL_REQUIRED" className="w-full bg-transparent border-b border-white/10 py-4 text-white font-bold tracking-[0.2em] focus:outline-none focus:border-blue-500 transition-all placeholder:text-white/5 uppercase text-xs" />
+                    <input 
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      type="email" 
+                      placeholder="EMAIL_REQUIRED" 
+                      className="w-full bg-transparent border-b border-white/10 py-4 text-white font-bold tracking-[0.2em] focus:outline-none focus:border-blue-500 transition-all placeholder:text-white/5 uppercase text-xs" 
+                    />
                   </div>
                 </div>
 
                 <div className="relative group/field pt-4">
                   <label className="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-4 block italic">Mission Directive</label>
-                  <textarea rows="4" placeholder="BRIEF YOUR VISION..." className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 text-white font-bold focus:outline-none focus:border-blue-500/50 transition-all placeholder:text-white/5 uppercase text-xs resize-none" />
+                  <textarea 
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="4" 
+                    placeholder="BRIEF YOUR VISION..." 
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 text-white font-bold focus:outline-none focus:border-blue-500/50 transition-all placeholder:text-white/5 uppercase text-xs resize-none" 
+                  />
                 </div>
 
-                <button className="group relative w-full h-20 bg-blue-600 rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(37,99,235,0.4)] active:scale-95 transition-all">
+                <button 
+                  type="submit"
+                  className="group relative w-full h-20 bg-blue-600 rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(37,99,235,0.4)] active:scale-95 transition-all"
+                >
                   <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 mix-blend-overlay" />
                   <span className="relative z-10 flex items-center justify-center gap-6 text-white font-black uppercase tracking-tighter text-2xl italic">
                     Execute Protocol <Send size={24} />
@@ -81,21 +139,23 @@ export default function TacticalContact() {
               </form>
             </motion.div>
 
-            {/* RIGHT: TACTICAL INFO (5 Cols) */}
+            {/* RIGHT: TACTICAL INFO */}
             <div className="lg:col-span-5 flex flex-col gap-6">
               
-              {/* HQ Map Component (Referencing your Bangalore Base) */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="relative flex-1 bg-slate-900 rounded-[2.5rem] border border-white/5 overflow-hidden group shadow-2xl"
               >
+                {/* Updated Map: Startup Park By Ique Ventures */}
                 <div className="absolute inset-0 grayscale contrast-150 brightness-50 opacity-40 group-hover:opacity-60 transition-all duration-700">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0267385806684!2d77.6412!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sIndiranagar%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1715700000000!5m2!1sen!2sin" 
+                    title="Startup Park HQ"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7799881108012!2d77.6201801!3d12.9218575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150058b75f01%3A0xd3b7950ec31e6322!2sStartup%20Park%20By%20Ique%20Ventures!5e0!3m2!1sen!2sin!4v1778795016595!5m2!1sen!2sin" 
                     className="w-full h-full border-0"
                     allowFullScreen="" 
                     loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#010204] via-transparent to-transparent" />
@@ -103,15 +163,14 @@ export default function TacticalContact() {
                 <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
                   <div>
                     <p className="text-[8px] font-black text-blue-500 uppercase tracking-widest mb-1">Base_Alpha</p>
-                    <h4 className="text-white font-black text-2xl italic uppercase tracking-tighter">Bangalore, IN</h4>
+                    <h4 className="text-white font-black text-2xl italic uppercase tracking-tighter">Startup Park, BNG</h4>
                   </div>
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_20px_rgba(37,99,235,0.5)]">
                     <MapPin size={22} />
                   </div>
                 </div>
               </motion.div>
 
-              {/* Status & Support Grid */}
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white/5 border border-white/5 rounded-3xl p-6 hover:bg-white/10 transition-all cursor-pointer group">
                   <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
@@ -129,7 +188,6 @@ export default function TacticalContact() {
                   <p className="text-white font-black italic uppercase tracking-tighter text-sm">Peer_Verified</p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
