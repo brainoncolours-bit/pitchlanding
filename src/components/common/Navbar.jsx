@@ -57,7 +57,7 @@ export default function Navbar() {
           <motion.img 
             whileHover={{ scale: 1.05 }}
             src="public/logo.png" 
-            alt="Logo" 
+            alt="Logos" 
             className="w-24 md:w-28 h-auto" 
           />
         </Link>
