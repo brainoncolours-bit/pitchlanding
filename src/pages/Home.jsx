@@ -23,7 +23,7 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Contact />
-      <Gallery />
+      {/* <Gallery /> */}
     </div>
   )
 }
