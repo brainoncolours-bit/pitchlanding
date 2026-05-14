@@ -92,7 +92,7 @@ export default function About() {
                     <div className="relative w-48 h-56 rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(37,99,235,0.25)]">
                        {/* The Founder Image */}
                        <img 
-                        src="src/assets/founder.jpeg" 
+                        src="/founder.jpeg" 
                         alt="Delvin Danny"
                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                        />
