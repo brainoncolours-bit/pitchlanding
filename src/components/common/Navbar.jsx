@@ -19,7 +19,7 @@ export default function Navbar() {
   })
 
   const navLinks = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Problem', href: '#problem' },
     { name: 'How It Works', href: '#how-it-works' },
@@ -74,7 +74,7 @@ export default function Navbar() {
           <motion.button 
             whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(37, 99, 235, 0.5)" }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-2.5 bg-blue-600 text-white rounded-full font-bold text-[10px] tracking-[0.2em] uppercase transition-colors hover:bg-blue-500"
+            className="px-6 py-2.5 bg-blue-600 text-white rounded-full font-bold text-[10px] tracking-[0.2em] uppercase transition-colors hover:bg-blue-500 mx-3"
           >
             Get Started
           </motion.button>
@@ -146,7 +146,7 @@ function DesktopNavLink({ link, onClick }) {
       onClick={(e) => onClick(e, link.href)}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative px-4 py-2 text-[13px] font-medium text-slate-400 transition-colors hover:text-white"
+      className="relative px-4 py-2 text-[18px] font-medium text-slate-400 transition-colors hover:text-white"
     >
       <span className="relative z-10">{link.name}</span>
       {hovered && (

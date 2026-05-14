@@ -38,7 +38,9 @@ export default function FinalCTA() {
         </p>
 
         {/* ACTION BUTTONS: High-Contrast Style */}
+        <a href="https://forms.gle/ZHmQLbU9zpAiWVmS6" target="_blank" rel="noopener noreferrer">
         <div className="flex flex-wrap gap-6 justify-center mb-24">
+          
           <button className="group relative px-10 py-5 bg-white rounded-2xl transition-all hover:scale-105 active:scale-95">
             <span className="relative z-10 text-black font-black uppercase tracking-tight flex items-center gap-2">
               Join as Founder <Rocket size={20} className="text-blue-600" />
@@ -54,6 +56,8 @@ export default function FinalCTA() {
             Become a Mentor
           </button>
         </div>
+          </a>
+
 
         {/* TRUST INDICATORS: Glassmorphism Card */}
         <div className="relative group">

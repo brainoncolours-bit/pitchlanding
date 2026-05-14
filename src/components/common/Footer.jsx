@@ -46,18 +46,7 @@ export default function Footer() {
           </div>
 
           {/* Ecosystem Resources */}
-          <div>
-            <h4 className="text-blue-500 font-black uppercase tracking-[0.3em] text-[10px] mb-8 font-mono">// ECOSYSTEM</h4>
-            <ul className="space-y-4">
-              {['Blog', 'Documentation', 'Community', 'Events'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-white/50 hover:text-white font-bold uppercase italic text-sm transition-all hover:pl-2">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+         
 
           {/* Social Command */}
           <div>

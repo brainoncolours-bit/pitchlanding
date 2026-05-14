@@ -60,10 +60,11 @@ export default function Benefits() {
                 </li>
               ))}
             </ul>
-
-            <button className="mt-12 w-full py-5 bg-blue-600 text-white font-black uppercase tracking-widest rounded-xl hover:bg-blue-500 transition-all shadow-[0_20px_40px_-10px_rgba(37,99,235,0.3)]">
-              Start as Founder
-            </button>
+              <a href="https://forms.gle/ZHmQLbU9zpAiWVmS6" target="_blank" rel="noopener noreferrer">
+                <button className="mt-12 w-full py-5 bg-blue-600 text-white font-black uppercase tracking-widest rounded-xl hover:bg-blue-500 transition-all shadow-[0_20px_40px_-10px_rgba(37,99,235,0.3)]">
+                  Start as Founder
+                </button>
+              </a>
           </motion.div>
 
           {/* RIGHT: INVESTORS (White/Monochrome) */}
@@ -91,10 +92,12 @@ export default function Benefits() {
                 </li>
               ))}
             </ul>
-
-            <button className="mt-12 w-full py-5 bg-white text-black font-black uppercase tracking-widest rounded-xl hover:bg-zinc-200 transition-all shadow-[0_20px_40px_-10px_rgba(255,255,255,0.1)]">
-              Join as Investor
-            </button>
+              <a href="
+              https://forms.gle/ZHmQLbU9zpAiWVmS6" target="_blank" rel="noopener noreferrer">
+                <button className="mt-12 w-full py-5 bg-white text-black font-black uppercase tracking-widest rounded-xl hover:bg-zinc-200 transition-all shadow-[0_20px_40px_-10px_rgba(255,255,255,0.1)]">
+                  Join as Investor
+                </button>
+              </a>
           </motion.div>
 
         </div>

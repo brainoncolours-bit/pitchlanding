@@ -15,7 +15,7 @@ export default function UltimateHero() {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 25]);
 
   return (
-    <section ref={containerRef} className="relative min-h-[110vh] bg-[#020408] overflow-hidden selection:bg-blue-500/30">
+    <section ref={containerRef} id='home' className="relative min-h-[110vh] bg-[#020408] overflow-hidden selection:bg-blue-500/30">
       
       {/* --- LAYER 1: CINEMATIC BACKGROUND --- */}
       <div className="absolute inset-0 z-0">
@@ -65,12 +65,15 @@ export default function UltimateHero() {
             </p>
 
             <div className="flex flex-wrap gap-6">
+              <a href="https://forms.gle/ZHmQLbU9zpAiWVmS6" target="_blank" rel="noopener noreferrer">
               <button className="group relative px-8 py-4 bg-white rounded-xl overflow-hidden transition-all active:scale-95">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300" />
                 <span className="relative z-10 text-black group-hover:text-white font-black uppercase tracking-tight flex items-center gap-2">
+                  
                   Join the Movement <ArrowRight size={20} />
                 </span>
               </button>
+              </a>
               
               <button className="px-8 py-4 border border-white/10 rounded-xl text-white font-bold hover:bg-white/5 transition-all">
                 Learn More
@@ -112,9 +115,11 @@ export default function UltimateHero() {
                 </div>
 
                 {/* Primary Button Styling from watermarked_img_10023162011067032725.png */}
-                <button className="w-full py-5 bg-gradient-to-b from-blue-500 to-blue-700 text-white font-black uppercase tracking-tighter rounded-2xl shadow-[0_15px_30px_-5px_rgba(37,99,235,0.4)] hover:brightness-110 transition-all">
-                  View Live Deck Feed
-                </button>
+                <a href="https://forms.gle/ZHmQLbU9zpAiWVmS6">
+                  <button className="w-full py-5 bg-gradient-to-b from-blue-500 to-blue-700 text-white font-black uppercase tracking-tighter rounded-2xl shadow-[0_15px_30px_-5px_rgba(37,99,235,0.4)] hover:brightness-110 transition-all">
+                    View Live Deck Feed
+                  </button>
+                </a>
               </div>
             </TiltCard>
 

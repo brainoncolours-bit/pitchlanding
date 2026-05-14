@@ -121,13 +121,12 @@ export default function About() {
                     "Pitch Studio is my life's work. Every founder who finds their investor, every mentor who discovers a unicorn – that's the movement we're building together."
                   </p>
 
-                  <div className="grid grid-cols-2 gap-4">
-                     <button className="py-4 bg-white/5 border border-white/10 text-white text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                  <div className="grid grid-cols-1 gap-4">
+                    <a href="https://www.linkedin.com/in/delvindanny/" target="_blank" rel="noopener noreferrer">
+                     <button className="py-4 bg-white/5 border border-white/10 text-white text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 w-full ">
                         LinkedIn
-                     </button>
-                     <button className="py-4 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest hover:bg-blue-500 transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
-                        Twitter
-                     </button>
+                      </button>
+                    </a>
                   </div>
                </div>
             </div>

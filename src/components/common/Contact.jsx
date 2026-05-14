@@ -4,7 +4,7 @@ import { Send, MapPin, Mail, Terminal, Fingerprint, Activity, ArrowRight, Shield
 
 export default function TacticalContact() {
   return (
-    <section id="contact-nexus" className="relative py-32 bg-[#010204] overflow-hidden selection:bg-blue-600">
+    <section id="contact" className="relative py-32 bg-[#010204] overflow-hidden selection:bg-blue-600">
       
       {/* --- KINETIC MESH BACKGROUND --- */}
       <div className="absolute inset-0 z-0">
