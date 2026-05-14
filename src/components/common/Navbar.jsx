@@ -56,7 +56,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center shrink-0">
           <motion.img 
             whileHover={{ scale: 1.05 }}
-            src="public/logo.png" 
+            src="/logo.png" 
             alt="Logos" 
             className="w-24 md:w-28 h-auto" 
           />
