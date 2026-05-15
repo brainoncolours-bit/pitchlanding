@@ -3,8 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Layers, Cpu, BarChart3, Box, Shield, Zap } from 'lucide-react';
 
 // Sample assets based on your professional portfolio
-const basePath = import.meta.env.BASE_URL;
-
 const assets = [
   {
     id: 'ATC-001',
