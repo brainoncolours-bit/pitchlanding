@@ -9,7 +9,7 @@ const assets = [
     title: 'StartUp City Dubai',
     category: 'Infra-Development',
     tags: ['Architecture', 'Urban Tech'],
-    img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1000',
+    img: 'src/assets/gallery/img2.jpg',
     span: 'md:col-span-2 md:row-span-2',
     status: 'In-Development'
   },
@@ -18,7 +18,7 @@ const assets = [
     title: 'Moonbliss Wellness',
     category: 'Product Ecosystem',
     tags: ['Branding', 'Design'],
-    img: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=600',
+    img: 'src/assets/gallery/img1.jpg',
     span: 'md:col-span-1 md:row-span-1',
     status: 'Live'
   },
@@ -27,7 +27,7 @@ const assets = [
     title: 'Global BFSI Platform',
     category: 'Digital Deployment',
     tags: ['Framer', 'React'],
-    img: 'https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600',
+    img: 'src/assets/gallery/img3.jpg',
     span: 'md:col-span-1 md:row-span-1',
     status: 'Deployed'
   },
@@ -36,7 +36,7 @@ const assets = [
     title: 'Y Not Cafe',
     category: 'Franchise Identity',
     tags: ['Signage', 'NPD'],
-    img: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1000',
+    img: 'src/assets/gallery/img4.jpg',
     span: 'md:col-span-2 md:row-span-1',
     status: 'Scaling'
   }

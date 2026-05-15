@@ -27,7 +27,7 @@ export default function Navbar() {
     { name: 'Journey', href: '#journey' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
-    // { name: 'Gallery', href: '#gallery' },
+    { name: 'Gallery', href: '#gallery' },
   ]
 
   const scrollToSection = (e, href) => {

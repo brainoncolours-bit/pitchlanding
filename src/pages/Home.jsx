@@ -23,7 +23,9 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Contact />
-      {/* <Gallery /> */}
+      <section id="gallery">
+        <Gallery />
+      </section>
     </div>
   )
 }
