@@ -3,13 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Layers, Cpu, BarChart3, Box, Shield, Zap } from 'lucide-react';
 
 // Sample assets based on your professional portfolio
+const basePath = import.meta.env.BASE_URL;
+
 const assets = [
   {
     id: 'ATC-001',
     title: 'StartUp City Dubai',
     category: 'Infra-Development',
     tags: ['Architecture', 'Urban Tech'],
-    img: 'src/assets/gallery/img2.jpg',
+    img: '/gallery/img2.jpg',
     span: 'md:col-span-2 md:row-span-2',
     status: 'In-Development'
   },
@@ -18,7 +20,7 @@ const assets = [
     title: 'Moonbliss Wellness',
     category: 'Product Ecosystem',
     tags: ['Branding', 'Design'],
-    img: 'src/assets/gallery/img1.jpg',
+    img: '/gallery/img1.jpg',
     span: 'md:col-span-1 md:row-span-1',
     status: 'Live'
   },
@@ -27,7 +29,7 @@ const assets = [
     title: 'Global BFSI Platform',
     category: 'Digital Deployment',
     tags: ['Framer', 'React'],
-    img: 'src/assets/gallery/img3.jpg',
+    img: '/gallery/img3.jpg',
     span: 'md:col-span-1 md:row-span-1',
     status: 'Deployed'
   },
@@ -36,7 +38,7 @@ const assets = [
     title: 'Y Not Cafe',
     category: 'Franchise Identity',
     tags: ['Signage', 'NPD'],
-    img: 'src/assets/gallery/img4.jpg',
+    img: '/gallery/img4.jpg',
     span: 'md:col-span-2 md:row-span-1',
     status: 'Scaling'
   }
