@@ -9,7 +9,7 @@ const assets = [
     title: 'StartUp City Dubai',
     category: 'Infra-Development',
     tags: ['Architecture', 'Urban Tech'],
-    img: '/gallery/img2.jpg',
+    img: '/img2.JPG', 
     span: 'md:col-span-2 md:row-span-2',
     status: 'In-Development'
   },
@@ -18,7 +18,7 @@ const assets = [
     title: 'Moonbliss Wellness',
     category: 'Product Ecosystem',
     tags: ['Branding', 'Design'],
-    img: '/gallery/img1.jpg',
+    img: '/img1.JPG', 
     span: 'md:col-span-1 md:row-span-1',
     status: 'Live'
   },
@@ -27,7 +27,7 @@ const assets = [
     title: 'Global BFSI Platform',
     category: 'Digital Deployment',
     tags: ['Framer', 'React'],
-    img: '/gallery/img3.jpg',
+    img: '/img3.JPG', 
     span: 'md:col-span-1 md:row-span-1',
     status: 'Deployed'
   },
@@ -36,7 +36,7 @@ const assets = [
     title: 'Y Not Cafe',
     category: 'Franchise Identity',
     tags: ['Signage', 'NPD'],
-    img: '/gallery/img4.jpg',
+    img: '/img4.JPG',
     span: 'md:col-span-2 md:row-span-1',
     status: 'Scaling'
   }
