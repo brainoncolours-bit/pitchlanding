@@ -42,8 +42,8 @@ export default function About() {
                <span className="text-blue-500 font-black uppercase tracking-[0.3em] text-xs">The Mission</span>
             </div>
 
-            <h2 className="text-5xl md:text-7xl font-[1000] text-white mb-10 uppercase italic leading-[0.9] tracking-tighter">
-              A <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700">Movement</span>, <br />
+            <h2 className="text-4xl md:text-7xl font-[1000] text-white mb-10 uppercase italic  leading-[0.9] tracking-tighter">
+              A <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700 px-2">Movement</span>, <br />
               Not a Platform.
             </h2>
 
